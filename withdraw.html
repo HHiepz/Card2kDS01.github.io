@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 01 - Card2k</title>
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/withdraw.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+</head>
+
+<body>
+    <div id="main">
+        <!-- Sidebar -->
+        <aside>
+            <div class="logo">
+                <img src="./assets/img/logo.png" alt="logo">
+            </div>
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="./index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span style="color: var(--isDanger);">Đổi thẻ</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./history.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Lịch sử</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./withdraw.html">
+                        <i class="fa-solid fa-landmark"></i>
+                        <span>Rút tiền</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <span>Tích hợp API</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div id="wp-content">
+            <div class="sub-menu container">
+                <div class="sub-menu__noti">
+                    <!-- Chữ auto chạy -->
+                    <marquee behavior="" direction="">
+                        <span class="sub-menu__text">Chào mừng bạn đến với Card2k</span>
+                    </marquee>
+                </div>
+                <ul class="infoUser ">
+                    <li class="infoUser__item infoUser__item-noti">
+                        <a href="#">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li class="infoUser__item infoUser__item-bell">
+                        <a href="#">
+                            <i class="fa-solid fa-bell"></i>
+                        </a>
+                    </li>
+                    <li class="infoUser__item infoUser__item-user">
+                        <a href="#">
+                            <div class="infoUser__item-user-details">
+                                <span class="infoUser__item-user-details-name">HHiepz</span>
+                                <span class="infoUser__item-user-details-point"><span>100.000.000</span> vnđ</span>
+                            </div>
+                            <div class="infoUser__item-user-logo">
+                                <img src="https://www.pngitem.com/pimgs/m/80-800194_transparent-users-icon-png-flat-user-icon-png.png"
+                                    alt="Logo User">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="infoUser__item">
+                        <a href="#">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Rút tiền -->
+            <div class="title-content container">
+                <h2> <i class="title-content__icon fa-solid fa-money-bill-transfer"></i>Rút tiền</h2>
+            </div>
+            <div class="content container">
+                <div class="redeemCard-noti">
+                    <p>Phi rút: <span>4.900đ</span></p>
+                </div>
+                <!-- Form Rút tiền -->
+                <div class="redeemCard__form">
+                    <div class="redeemCard__form-box">
+                        <label style="color: var(--isDanger); font-weight: bold;">Người thu hưởng</label>
+                        <select name="#" id="select_card_type">
+                            <option value="tranhuuhiep">Trần Hữu Hiệp (TPBank)</option>
+                        </select>
+                    </div>
+                    <div class="redeemCard__form-box">
+                        <label><strong style="color: var(--isInfo); font-weight: bold;">Số tiền</strong></label>
+                        <input type="number" placeholder="Tối thiếu 10.000đ">
+                    </div>
+                    <div class="redeemCard__form-box redeemCard__form-box-submit">
+                        <input type="submit" value="Gởi yêu cầu">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thêm người thụ hưởng -->
+            <div class="title-content container">
+                <h2> <i class="title-content__icon fa-solid fa-plus"></i>Thêm người thụ hưởng</h2>
+            </div>
+            <div class="content container">
+                <div class="redeemCard-noti">
+                    <p>✅: Trạng thái <span style="color: var(--isSuccess); font-weight: bold;">tự động</span>. Nên sử
+                        dụng khi có biểu tượng này !</p>
+                    <p>⚠️: Trạng thái <span style="color: var(--isDanger); font-weight: bold;">bảo trì / duyệt thủ
+                            công</span>. Hạn chế sử dụng !</p>
+                </div>
+                <!-- Thêm người thụ hưởng -->
+                <div class="redeemCard__form">
+                    <div class="redeemCard__form-box">
+                        <label>Tên Ngân hàng</label>
+                        <select name="#" id="select_card_type">
+                            <option value="TPBank">✅ Momo (Tự động 15s)</option>
+                            <option value="TPBank">⚠️ MBBank</option>
+                            <option value="TPBank">⚠️ SCB</option>
+                            <option value="TPBank">⚠️ TPBank</option>
+                        </select>
+                    </div>
+                    <div class="redeemCard__form-box">
+                        <label>Tên người thụ hưởng</label>
+                        <input type="text" placeholder="Ghi in hoa, không dấu !">
+                    </div>
+                    <div class="redeemCard__form-box redeemCard__form-box-submit">
+                        <input type="submit" value="Thêm">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Danh sách người thụ hưởng -->
+            <div class="title-content container">
+                <h2> <i class="title-content__icon fa-solid fa-ellipsis-vertical"></i>Danh sách...</h2>
+            </div>
+            <div class="content container">
+                <!-- Danh sách người thụ hưởng -->
+                <div class="listUserBank">
+                    <table class="listUserBank__table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên ngân hàng</th>
+                                <th>Tên người thụ hưởng</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Momo</td>
+                                <td>Trần Hữu Hiệp</td>
+                                <td>
+                                    <a href="#" class="listUserBank__btn listUserBank__btn--delete">Xóa</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>TPBank</td>
+                                <td>Trần Hữu Hiệp</td>
+                                <td>
+                                    <a href="#" class="listUserBank__btn listUserBank__btn--delete">Xóa</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="container">
+        <div class="footer__intro">
+            <h2 class="footer__title">Card2k.Com</h2>
+            <div class="footer__intro-content">
+                Đại lý bán thẻ / gạch thẻ điện thoại Viettel, Vinaphone, Mobifone, thẻ game online Pubg, zing, Vcoin,
+                Gate, Carot, Garena quản lý bởi HHIEPZ
+            </div>
+            <div class="footer__intro-social">
+                <a href="#" class="footer__intro-social-link">
+                    <i class="footer__intro-social-link-icon fab fa-facebook-square"></i>
+                </a>
+                <a href="#" class="footer__intro-social-link">
+                    <i class="footer__intro-social-link-icon fab fa-youtube-square"></i>
+                </a>
+                <a href="#" class="footer__intro-social-link">
+                    <i class="footer__intro-social-link-icon fab fa-twitter-square"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer__info">
+            <h2 class="footer__title">
+                Thông tin liên hệ
+            </h2>
+            <div class="footer__intro-content">
+                <p>Email: <strong style="font-weight: bold;">hotrocard2k@gmail.com</strong></p>
+                <p>Điện thoại: <strong style="font-weight: bold;">0389.802.966</strong></p>
+                <p>Đổi thẻ cào: <a href="#">card2k.com</a></p>
+            </div>
+        </div>
+    </footer>
+    <div class="container" id="copyright">
+        <b>Copyright © Card2K Service 2023</b>
+    </div>
+
+    <!-- Liên kết JS -->
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+/* Title content */
+.title-content {
+    background-color: var(--bg-hover);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.title-content h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--text-hover);
+}
+
+.title-content__icon {
+    width: 3rem;
+}
+
+/* Content */
+.content {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+/* Card Discount */
+.cardDiscount__selected {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* .cardDiscount__selected-item {
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    border-radius: 4rem;
+    background-color: var(--isWarning);
+    cursor: pointer;
+    transition: 0.3s background-color;
+}
+
+.cardDiscount__selected-item:hover {
+    background-color: var(--isSuccess);
+} */
+
+.cardDiscount__selected-item {
+    display: inline-block;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.cardDiscount__selected-item:hover {
+    border-bottom: 1px solid var(--isSuccess);
+    color: var(--text-hover);
+}
+
+.cardDiscount__selected-item--isSelect {
+    flex: 1;
+    background-color: var(--bg-hover);
+    border-bottom: 1px solid var(--text-hover);
+    font-weight: bold;
+}
+
+.cardDiscount__details {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.cardDiscount__details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cardDiscount__details-table tr {
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.1); */
+}
+
+.cardDiscount__details-table tr:last-child {
+    border-bottom: none;
+}
+
+.cardDiscount__details-table th {
+    padding: 1rem 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text-hover);
+}
+
+.cardDiscount__details-table td {
+    padding: 1rem 0rem;
+    text-align: center;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cardDiscount__details-table td:hover {
+    background-color: var(--bg-hover);
+    color: var(--text-hover);
+    cursor: grab;
+}
+
+.cardDiscount__details-table td span {
+    padding: 0rem 1rem;
+}
+
+.cardDiscount__details__lastUpdate {
+    text-align: right;
+}
+
+
+/* redeemCard */
+.redeemCard-noti {
+    padding: 1rem 2rem;
+    background-color: var(--bg-body-color);
+    border-radius: var(--br-radius);
+}
+
+.redeemCard__price {
+    text-align: center;
+    padding: 2rem;
+    border: 1px solid var(--isDanger);
+    border-radius: var(--br-radius);
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--text-hover);
+}
+
+.redeemCard__price span {
+    font-size: 2rem;
+    color: var(--isDanger);
+}
+
+.redeemCard__form {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+
+.redeemCard__form-box {
+    flex: 1;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--br-radius);
+    margin-right: 1rem;
+}
+
+.redeemCard__form-box label {
+    display: block;
+}
+
+.redeemCard__form-box input {
+    width: 100%;
+    border: none;
+    background-color: var(--isWarning);
+    outline: none;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+}
+
+.redeemCard__form select {
+    width: 100%;
+    border: none;
+    background-color: var(--isWarning);
+    outline: none;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.redeemCard__form-box input,
+.redeemCard__form select {
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.redeemCard__form-box-submit {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.redeemCard__form-box-submit input {
+    margin: 0;
+    height: 100%;
+    background-color: var(--text-hover);
+    color: var(--text-color-white);
+    transition: 0.3s background-color;
+}
+
+.redeemCard__form-box-submit input:hover {
+    background-color: var(--isInfo);
+    cursor: pointer;
+}
+

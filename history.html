@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 01 - Card2k</title>
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/history.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+</head>
+
+<body>
+    <div id="main">
+        <!-- Sidebar -->
+        <aside>
+            <div class="logo">
+                <img src="./assets/img/logo.png" alt="logo">
+            </div>
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="./index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span style="color: var(--isDanger);">Đổi thẻ</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./history.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Lịch sử</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./withdraw.html">
+                        <i class="fa-solid fa-landmark"></i>
+                        <span>Rút tiền</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <span>Tích hợp API</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div id="wp-content">
+            <div class="sub-menu container">
+                <div class="sub-menu__noti">
+                    <!-- Chữ auto chạy -->
+                    <marquee behavior="" direction="">
+                        <span class="sub-menu__text">Chào mừng bạn đến với Card2k</span>
+                    </marquee>
+                </div>
+                <ul class="infoUser ">
+                    <li class="infoUser__item infoUser__item-noti">
+                        <a href="#">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li class="infoUser__item infoUser__item-bell">
+                        <a href="#">
+                            <i class="fa-solid fa-bell"></i>
+                        </a>
+                    </li>
+                    <li class="infoUser__item infoUser__item-user">
+                        <a href="#">
+                            <div class="infoUser__item-user-details">
+                                <span class="infoUser__item-user-details-name">HHiepz</span>
+                                <span class="infoUser__item-user-details-point"><span>100.000.000</span> vnđ</span>
+                            </div>
+                            <div class="infoUser__item-user-logo">
+                                <img src="https://www.pngitem.com/pimgs/m/80-800194_transparent-users-icon-png-flat-user-icon-png.png"
+                                    alt="Logo User">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="infoUser__item">
+                        <a href="#">
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="title-content container">
+                <h2> <i class="title-content__icon fa-solid fa-clock-rotate-left"></i>Lịch sử</h2>
+            </div>
+            <div class="content container">
+                <div class="statis">
+                    <div class="statis__box">
+                        <p class="statis__box-points statis__box-thucNhan"><span>758.000</span>đ</p>
+                        <p class="statis__box-title">Tổng thực nhận</p>
+                    </div>
+                    <div class="statis__box statis__box-theDung">
+                        <p class="statis__box-points"><span>14</span></p>
+                        <p class="statis__box-title">Tổng thẻ đúng</p>
+                    </div>
+                    <div class="statis__box statis__box-theSai">
+                        <p class="statis__box-points"><span>1</span></p>
+                        <p class="statis__box-title">Tổng thẻ sai</p>
+                    </div>
+                    <div class="statis__box statis__box-tongThe">
+                        <p class="statis__box-points"><span>15</span></p>
+                        <p class="statis__box-title">Tổng thẻ đổi</p>
+                    </div>
+                </div>
+                <div class="history">
+                    <table class="history__table">
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Loại thẻ</th>
+                                <th>Mệnh giá</th>
+                                <th>Giá trị</th>
+                                <th>Trạng thái</th>
+                                <th>Thời gian</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Viettel</td>
+                                <td>10.000</td>
+                                <td>9.000</td>
+                                <td>Thành công</td>
+                                <td>20/10/2021 18:35:09</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Viettel</td>
+                                <td>10.000</td>
+                                <td>9.000</td>
+                                <td>Thành công</td>
+                                <td>20/10/2021 18:35:09</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Viettel</td>
+                                <td>10.000</td>
+                                <td>9.000</td>
+                                <td>Thành công</td>
+                                <td>20/10/2021 18:35:09</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Viettel</td>
+                                <td>10.000</td>
+                                <td>9.000</td>
+                                <td>Thành công</td>
+                                <td>20/10/2021 18:35:09</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Viettel</td>
+                                <td>10.000</td>
+                                <td>9.000</td>
+                                <td>Thành công</td>
+                                <td>20/10/2021 18:35:09</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Viettel</td>
+                                <td>10.000</td>
+                                <td>9.000</td>
+                                <td>Thành công</td>
+                                <td>20/10/2021 18:35:09</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Viettel</td>
+                                <td>10.000</td>
+                                <td>9.000</td>
+                                <td>Thành công</td>
+                                <td>20/10/2021 18:35:09</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Viettel</td>
+                                <td>10.000</td>
+                                <td>9.000</td>
+                                <td>Thành công</td>
+                                <td>20/10/2021 18:35:09</td>
+                            </tr>
+                            <tr class="card-danger">
+                                <td>9</td>
+                                <td>Viettel</td>
+                                <td>10.000</td>
+                                <td>9.000</td>
+                                <td>Thất bại</td>
+                                <td>20/10/2021 18:35:09</td>
+                            </tr>
+                            <tr class="card-warning">
+                                <td>10</td>
+                                <td>Viettel</td>
+                                <td>10.000</td>
+                                <td>9.000</td>
+                                <td>Pending</td>
+                                <td>20/10/2021 18:35:09</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer class="container">
+        <div class="footer__intro">
+            <h2 class="footer__title">Card2k.Com</h2>
+            <div class="footer__intro-content">
+                Đại lý bán thẻ / gạch thẻ điện thoại Viettel, Vinaphone, Mobifone, thẻ game online Pubg, zing, Vcoin,
+                Gate, Carot, Garena quản lý bởi HHIEPZ
+            </div>
+            <div class="footer__intro-social">
+                <a href="#" class="footer__intro-social-link">
+                    <i class="footer__intro-social-link-icon fab fa-facebook-square"></i>
+                </a>
+                <a href="#" class="footer__intro-social-link">
+                    <i class="footer__intro-social-link-icon fab fa-youtube-square"></i>
+                </a>
+                <a href="#" class="footer__intro-social-link">
+                    <i class="footer__intro-social-link-icon fab fa-twitter-square"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer__info">
+            <h2 class="footer__title">
+                Thông tin liên hệ
+            </h2>
+            <div class="footer__intro-content">
+                <p>Email: <strong style="font-weight: bold;">hotrocard2k@gmail.com</strong></p>
+                <p>Điện thoại: <strong style="font-weight: bold;">0389.802.966</strong></p>
+                <p>Đổi thẻ cào: <a href="#">card2k.com</a></p>
+            </div>
+        </div>
+    </footer>
+    <div class="container" id="copyright">
+        <b>Copyright © Card2K Service 2023</b>
+    </div>
+
+
+
+    <!-- Liên kết JS -->
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>

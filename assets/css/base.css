@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+:root {
+    --bg-body-color: #ecf0f1;
+    --bg-color: #fff;
+    --text-color-white: #eee;
+    --text-color: #333;
+    --bg-hover: #a29bfe33;
+    --text-hover: #5f27cd;
+
+    --br-radius: 1.6rem;
+
+    --isSuccess: #2ecc71;
+    --isWarning: #f7f1e3;
+    --isDanger: #e74c3c;
+    --isInfo: #3498db;
+}
+
+body {
+    padding: 5rem 4rem;
+    background-color: var(--bg-body-color);
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+
+#main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+aside {
+    width: 20%;
+    margin-right: 3rem;
+    flex: 0 0 auto;
+    /* Không mở rộng div này, giữ kích thước ban đầu */
+}
+
+#wp-content {
+    flex: 1 1 auto;
+    /* Cho phép div này mở rộng */
+
+}
+
+.container {
+    padding: 0rem 3rem;
+}
+
+aside,
+#wp-content {
+    background-color: var(--bg-color);
+    border-radius: var(--br-radius);
+    overflow: hidden;
+}
+
+/* ------------------------------------------------------- */
+/*                     Chức năng                          */
+/* ------------------------------------------------------- */
+.notiPutCard {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.active {
+    display: block !important;
+}
+
+.notiPutCard__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3rem;
+    background-color: var(--bg-color);
+    border-radius: var(--br-radius);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+.notiPutCard__container-title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.notiPutCard__container-title-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.notiPutCard__container-title-icon {
+    font-size: 5rem;
+    color: var(--isSuccess);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.notiPutCard__container-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ------------------------------------------------------- */
+/*                     Reponsive                          */
+/* ------------------------------------------------------- */
+@media (min-width: 1024px) {
+    /* CODE PC HERE... */
+}
+
+
+@media (min-width: 740px) and (max-width: 1023px) {
+
+    /* CODE TABLET HERE... */
+    aside {
+        width: 0;
+        margin: 0;
+    }
+
+    .cardDiscount__selected {
+        flex-wrap: wrap;
+        justify-content: start !important;
+    }
+
+    .cardDiscount__selected-item {
+        padding: 1rem 2rem;
+        margin-right: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .cardDiscount__details {
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .cardDiscount__details-table td span {
+        display: block;
+    }
+
+    .redeemCard__form {
+        flex-direction: column;
+    }
+
+    .redeemCard__form-box {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+
+@media (max-width: 739px) {
+
+    /* CODE MOBILE HERE... */
+    aside {
+        width: 0;
+        margin: 0;
+    }
+
+    .cardDiscount__selected {
+        flex-wrap: wrap;
+        justify-content: start !important;
+    }
+
+    .cardDiscount__selected-item {
+        padding: 1rem 2rem;
+        margin-right: 0.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .cardDiscount__details {
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .cardDiscount__details-table td span {
+        display: block;
+    }
+
+    .redeemCard__form {
+        flex-direction: column;
+    }
+
+    .redeemCard__form-box {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 01 - Card2k</title>
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+</head>
+
+<body>
+    <div id="main">
+        <!-- Sidebar -->
+        <aside>
+            <div class="logo">
+                <img src="./assets/img/logo.png" alt="logo">
+            </div>
+            <ul class="menu">
+                <li class="menu__item">
+                    <a href="./index.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span style="color: var(--isDanger);">Đổi thẻ</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./history.html">
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+                        <span>Lịch sử</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="./withdraw.html">
+                        <i class="fa-solid fa-landmark"></i>
+                        <span>Rút tiền</span>
+                    </a>
+                </li>
+                <li class="menu__item">
+                    <a href="#">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <span>Tích hợp API</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div id="wp-content">
+            <div class="sub-menu container">
+                <div class="sub-menu__noti">
+                    <!-- Chữ auto chạy -->
+                    <marquee behavior="" direction="">
+                        <span class="sub-menu__text">Chào mừng bạn đến với Card2k</span>
+                    </marquee>
+                </div>
+                <ul class="infoUser ">
+                    <li class="infoUser__item infoUser__item-noti">
+                        <a href="#">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </li>
+                    <li class="infoUser__item infoUser__item-bell">
+                        <a href="#">
+                            <i class="fa-solid fa-bell"></i>
+                        </a>
+                    </li>
+                    <li class="infoUser__item infoUser__item-user">
+                        <a href="#">
+                            <div class="infoUser__item-user-details">
+                                <span class="infoUser__item-user-details-name">HHiepz</span>
+                                <span class="infoUser__item-user-details-point"><span>100.000.000</span> vnđ</span>
+                            </div>
+                            <div class="infoUser__item-user-logo">
+                                <img src="https://www.pngitem.com/pimgs/m/80-800194_transparent-users-icon-png-flat-user-icon-png.png"
+                                    alt="Logo User">
+                            </div>
+                        </a>
+                    </li>
+                    <li id="js-headerSubMenu" class="infoUser__item infoUser__item-hasMenu">
+                        <a>
+                            <i class="fa-solid fa-bars"></i>
+                        </a>
+                        <ul class="infoUser__item-menu">
+                            <li>
+                                <a href="./userinfo.html" class="infoUser__item-menu-item">
+                                    Thông tin tài khoản
+                                    <i class="infoUser__item-menu-icon fa-solid fa-user"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="infoUser__item-menu-item" style="color: var(--isDanger);">
+                                    Đăng xuất
+                                    <i class="infoUser__item-menu-icon fa-solid fa-right-from-bracket"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="title-content container">
+                <h2> <i class="title-content__icon fa-solid fa-share-from-square"></i>Chiết khấu thẻ cào</h2>
+            </div>
+            <div class="content container">
+                <div class="cardDiscount">
+                    <div class="cardDiscount__selected">
+                        <!-- Tùy chọn loại -->
+                        <span class="cardDiscount__selected-item" style="color: #d63031;">Viettel</span>
+                        <span class="cardDiscount__selected-item" style="color: #0984e3">Vinaphone</span>
+                        <span class="cardDiscount__selected-item" style="color: #0984e3;"><span
+                                style="color: #d63031">Mobi</span>fone</span>
+                        <span class="cardDiscount__selected-item" style="color: #e67e22;">Vietnamobile</span>
+                        <span class="cardDiscount__selected-item"><span style="color: #0984e3">Z</span><span
+                                style="color: #2ecc71">i</span><span style="color: #e67e22">n</span><span
+                                style="color: #d63031">g</span></span>
+                        <span class="cardDiscount__selected-item" style="color: #d63031;">Gate</span>
+                        <span class="cardDiscount__selected-item" style="color: #d63031;">Garena</span>
+                        <span class="cardDiscount__selected-item cardDiscount__selected-item-vcoin">Vc<span
+                                style="color: #e67e22;">o</span>in</span>
+                    </div>
+                    <div class="cardDiscount__details">
+                        <!-- Chi tiết chiết khấu -->
+                        <table class="cardDiscount__details-table">
+                            <thead>
+                                <tr>
+                                    <th>Cấp bậc</th>
+                                    <th>10.000đ</th>
+                                    <th>20.000đ</th>
+                                    <th>30.000đ</th>
+                                    <th>50.000đ</th>
+                                    <th>100.000đ</th>
+                                    <th>200.000đ</th>
+                                    <th>300.000đ</th>
+                                    <th>500.000đ</th>
+                                    <th>1.000.000đ</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span>Đại lý</span></td>
+                                    <td>11%</td>
+                                    <td>11%</td>
+                                    <td>11.2%</td>
+                                    <td>11%</td>
+                                    <td>11.2%</td>
+                                    <td>11.2%</td>
+                                    <td>11.2%</td>
+                                    <td>11.2%</td>
+                                    <td>11%</td>
+                                </tr>
+                                <tr>
+                                    <td><span>VIP</span></td>
+                                    <td>11%</td>
+                                    <td>11%</td>
+                                    <td>11.2%</td>
+                                    <td>11%</td>
+                                    <td>11.2%</td>
+                                    <td>11.2%</td>
+                                    <td>11.2%</td>
+                                    <td>11.2%</td>
+                                    <td>11%</td>
+                                </tr>
+                                <tr>
+                                    <td><span>Thành Viên</span></td>
+                                    <td>11%</td>
+                                    <td>11%</td>
+                                    <td>11.2%</td>
+                                    <td>11%</td>
+                                    <td>11.2%</td>
+                                    <td>11.2%</td>
+                                    <td>11.2%</td>
+                                    <td>11.2%</td>
+                                    <td>11%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="cardDiscount__details__lastUpdate">
+                        <p>Lần cuối cập nhật: <span>01/05/2023</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="title-content container">
+                <h2> <i class="title-content__icon fa-solid fa-shield-halved"></i>Đổi thẻ cào</h2>
+            </div>
+            <div class="content container">
+                <div class="redeemCard">
+                    <!-- Lưu ý đổi card -->
+                    <div class="redeemCard-noti">
+                        <i class="fa-solid fa-exclamation-circle"></i>
+                        <span>Chú ý: </span>
+                        <span>Chỉ được đổi thẻ cào khi số dư tài khoản lớn hơn 10.000đ</span>
+                        <p>
+                            <span>Đổi thẻ cào sẽ được cộng vào số dư tài khoản</span>
+                        </p>
+                    </div>
+                    <!-- Khu vực hiển thị giá hiện tại -->
+                    <p class="redeemCard__price">
+                        Tổng thực nhận: <span>0đ</span>
+                    </p>
+                    <!-- Khu vực đổi card -->
+                    <div class="redeemCard__form">
+                        <div class="redeemCard__form-box">
+                            <label>Loại thẻ</label>
+                            <select name="loaiThe" id="select_card_type">
+                                <option value="default">Chọn loại thẻ</option>
+                                <option value="Viettel">Viettel Auto</option>
+                                <option value="Vinaphone">Vinaphone Auto</option>
+                                <option value="Mobifone">Mobifone Auto</option>
+                                <option value="Vietnamobile">Vietnamobile Auto</option>
+                                <option value="Vcoin">Vcoin Auto</option>
+                                <option value="Zing">Zing Auto</option>
+                                <option value="Gate">Gate Auto</option>
+                                <option value="Garena">Garena Auto</option>
+                            </select>
+                        </div>
+                        <div class="redeemCard__form-box">
+                            <label>Mệnh giá</label>
+                            <select name="menhGia" id="select_card_type">
+                                <option value="default">Chọn mệnh giá</option>
+                                <option value="10000">10.000đ (11%)</option>
+                                <option value="20000">20.000đ (11%)</option>
+                                <option value="30000">30.000đ (11.2%)</option>
+                                <option value="50000">50.000đ (11%)</option>
+                                <option value="100000">100.000đ (11.2%)</option>
+                                <option value="200000">200.000đ (11.2%)</option>
+                                <option value="300000">300.000đ (11.2%)</option>
+                                <option value="500000">500.000đ (11.2%)</option>
+                                <option value="1000000">1.000.000đ (11%)</option>
+                            </select>
+                        </div>
+                        <div class="redeemCard__form-box">
+                            <label><strong style="color: var(--isDanger); font-weight: bold;">Mã</strong> thẻ</label>
+                            <input type="text" placeholder="Nhập Mã thẻ" name="maThe">
+                        </div>
+                        <div class="redeemCard__form-box">
+                            <label><strong style="color: var(--isInfo); font-weight: bold;">Serial</strong> thẻ</label>
+                            <input type="text" placeholder="Nhập Seria thẻ" name="serialThe">
+                        </div>
+                        <div class="redeemCard__form-box redeemCard__form-box-submit">
+                            <input id="js-RedeemCard" type="submit" value="Gửi thẻ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="container">
+        <div class="footer__intro">
+            <h2 class="footer__title">Card2k.Com</h2>
+            <div class="footer__intro-content">
+                Đại lý bán thẻ / gạch thẻ điện thoại Viettel, Vinaphone, Mobifone, thẻ game online Pubg, zing, Vcoin,
+                Gate, Carot, Garena quản lý bởi HHIEPZ
+            </div>
+            <div class="footer__intro-social">
+                <a href="#" class="footer__intro-social-link">
+                    <i class="footer__intro-social-link-icon fab fa-facebook-square"></i>
+                </a>
+                <a href="#" class="footer__intro-social-link">
+                    <i class="footer__intro-social-link-icon fab fa-youtube-square"></i>
+                </a>
+                <a href="#" class="footer__intro-social-link">
+                    <i class="footer__intro-social-link-icon fab fa-twitter-square"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer__info">
+            <h2 class="footer__title">
+                Thông tin liên hệ
+            </h2>
+            <div class="footer__intro-content">
+                <p>Email: <strong style="font-weight: bold;">hotrocard2k@gmail.com</strong></p>
+                <p>Điện thoại: <strong style="font-weight: bold;">0389.802.966</strong></p>
+                <p>Đổi thẻ cào: <a href="#">card2k.com</a></p>
+            </div>
+        </div>
+    </footer>
+    <div class="container" id="copyright">
+        <b>Copyright © Card2K Service 2023</b>
+    </div>
+
+    <!-- noti put card -->
+    <div class="notiPutCard">
+        <div class="notiPutCard__container">
+            <div class="notiPutCard__container-title">
+                <h3 class="notiPutCard__container-title-text">Thông báo</h3>
+                <i class="notiPutCard__container-title-icon fa-regular fa-thumbs-up"></i>
+            </div>
+            <div class="notiPutCard__container-content">
+                <p class="notiPutCard__container-content-text">Bạn đã gửi card thành công, vui lòng chờ
+                    1-5 phút hệ thống đang duyệt !</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Liên kết JS -->
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/header.js"></script>
+</body>
+
+</html>
