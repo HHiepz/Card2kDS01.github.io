@@ -161,6 +161,8 @@ aside,
         margin-right: 0;
         margin-bottom: 1rem;
     }
+
+
 }
 
 
@@ -200,5 +202,15 @@ aside,
     .redeemCard__form-box {
         margin-right: 0;
         margin-bottom: 1rem;
+    }
+
+    .infoUser__item-user-details-point {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-top: 0.2rem;
+    }
+
+    .infoUser__item-user-details-point-type {
+        padding-left: 0.5rem;
     }
 }
