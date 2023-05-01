@@ -73,4 +73,3 @@ redeemCard.addEventListener("click", () => {
         return notiCardSuccess();
     }
 });
-

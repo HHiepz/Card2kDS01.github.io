@@ -65,7 +65,9 @@
     align-items: center;
 }
 
-.infoUser__item {}
+.infoUser__item {
+    position: relative;
+}
 
 .infoUser__item:hover>a {
     color: var(--text-hover);
@@ -117,11 +119,8 @@
     font-weight: bold;
 }
 
-.infoUser__item-hasMenu {
-    position: relative;
-}
-
-.infoUser__item-hasMenu:hover .infoUser__item-menu{
+.infoUser__item-hasMenu:hover .infoUser__item-menu,
+.infoUser__item-hasMenu:hover .infoUser__item-noti {
     display: block;
 }
 
@@ -177,4 +176,68 @@
     width: 2rem;
     height: 2rem;
     margin-left: 1rem;
+}
+
+.infoUser__item-noti {
+    display: none;
+    position: absolute;
+    top: 200%;
+    left: 0%;
+    background-color: var(--bg-submenu);
+    border-radius: var(--br-radius);
+    /* overflow: hidden; */
+    z-index: 1;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.infoUser__item-noti::before {
+    content: "";
+    position: absolute;
+    top: -11%;
+    left: 1%;
+    border: 20px solid transparent;
+    border-bottom-color: var(--bg-submenu);
+    z-index: -1;
+}
+
+.infoUser__item-noti::after {
+    /* Tạo 1 bức tường ảo */
+    content: "";
+    position: absolute;
+    top: -11%;
+    left: 0%;
+    padding: 2rem 0.5rem;
+    width: 15%;
+    z-index: 1;
+}
+
+.infoUser__item-noti-item {
+    display: block;
+    margin: 0 !important;
+    padding: 2rem !important;
+    min-width: 30rem;
+    font-size: 1.2rem !important;
+    justify-content: space-between;
+    border-radius: var(--br-radius);
+    align-items: center;
+}
+
+.infoUser__item-noti-item:hover {
+    color: var(--isDanger);
+    cursor: pointer;
+}
+
+.infoUser__item-noti-item-content {
+    display: flex;
+    align-items: center;
+}
+
+.infoUser__item-noti-item-content-date {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    text-align: right;
+}
+
+.infoUser__item-noti-item-isNotRead {
+    background-color: var(--bg-color);
 }
