@@ -149,6 +149,7 @@ aside,
         overflow: scroll;
     }
 
+
     .cardDiscount__details-table td span {
         display: block;
     }
@@ -193,6 +194,11 @@ aside,
         display: flex;
         flex-direction: column;
         overflow: scroll;
+    }
+
+    .history {
+        overflow: scroll;
+        padding: 0 !important;
     }
 
     .cardDiscount__details-table td span {
@@ -242,4 +248,12 @@ aside,
         margin-bottom: 1rem;
     }
 
+    .statis {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .statis__box {
+        margin-bottom: 1.5rem;
+    }
 }
