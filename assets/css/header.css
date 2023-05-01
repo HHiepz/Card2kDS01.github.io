@@ -67,7 +67,7 @@
 
 .infoUser__item {}
 
-.infoUser__item:hover > a {
+.infoUser__item:hover>a {
     color: var(--text-hover);
     cursor: pointer;
 }
@@ -121,12 +121,38 @@
     position: relative;
 }
 
+.infoUser__item-hasMenu:hover .infoUser__item-menu{
+    display: block;
+}
+
+.infoUser__item-menu::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    right: 10%;
+    border: 10px solid transparent;
+    border-bottom-color: var(--bg-submenu);
+    z-index: 1;
+}
+
+.infoUser__item-menu::after {
+    /* Tạo 1 bức tường ảo */
+    content: "";
+    position: absolute;
+    top: -11%;
+    right: 0%;
+    padding: 1.2rem;
+    width: 15%;
+    /* background-color: red; */
+    z-index: 0;
+}
+
 .infoUser__item-menu {
     display: none;
     position: absolute;
     top: 200%;
     right: 0%;
-    background-color: var(--bg-hover);
+    background-color: var(--bg-submenu);
     border-radius: var(--br-radius);
     padding: 1rem 0rem;
     z-index: 1;
@@ -150,5 +176,5 @@
 .infoUser__item-menu-icon {
     width: 2rem;
     height: 2rem;
-    margin-right: 1rem;
+    margin-left: 1rem;
 }
