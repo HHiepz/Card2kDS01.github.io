@@ -119,12 +119,11 @@ aside,
 /* ------------------------------------------------------- */
 /*                     Reponsive                          */
 /* ------------------------------------------------------- */
-@media (min-width: 1024px) {
-    /* CODE PC HERE... */
-}
+/* @media (min-width: 1215px) {
+} */
 
 
-@media (min-width: 740px) and (max-width: 1023px) {
+@media (min-width: 740px) and (max-width: 1214px) {
 
     /* CODE TABLET HERE... */
     aside {
@@ -162,6 +161,10 @@ aside,
         margin-bottom: 1rem;
     }
 
+
+    body {
+        padding: 2.5rem 2rem;
+    }
 
 }
 
@@ -213,4 +216,13 @@ aside,
     .infoUser__item-user-details-point-type {
         padding-left: 0.5rem;
     }
+
+    marquee {
+        display: none;
+    }
+
+    body {
+        padding: 0;
+    }
+
 }
