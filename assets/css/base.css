@@ -306,6 +306,46 @@ aside,
     border: 1px solid var(--isInfo);
 }
 
+/* notiBegin */
+.notiBegin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notiBegin__container {
+    width: 50%;
+    background-color: var(--bg-body-color);
+    padding: 4rem;
+    border-radius: var(--br-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 30rem;
+    max-width: 50rem;
+}
+
+.notiBegin__title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    line-height: 1.3;
+    text-align: center;
+    color: #333;
+}
+
+.notiBegin__content {
+    text-align: center;
+}
 
 /* ------------------------------------------------------- */
 /*                     Reponsive                          */
