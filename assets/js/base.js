@@ -46,7 +46,7 @@ function boxNoti(messager, isStatus = 'warning', title = 'Hệ thống') {
     // Xóa boxNoti sau 5s
     let timeout = setTimeout(() => {
         document.querySelector(".notiPutCard").remove();
-    }, 5000)
+    }, 10000)
 }
 
 function checkBoxNoti(messager, isStatus = 'warning', title = 'Bạn có chắc chắn chứ?') {
@@ -131,3 +131,9 @@ redeemCard.addEventListener("click", () => {
             }
         })
 });
+
+
+function start() {
+    checkBoxNoti('Các giao diện đã xong gồm <br>"Đổi thẻ, lịch sử, rút tiền, thông tin người dùng" <br> <br> Cập nhật lần cuối 03/05/2023 04:54AM ', 'warning', 'Đang làm giao diện');
+}
+start();
