@@ -16,11 +16,12 @@ html {
     --bg-hover: #a29bfe33;
     --bg-submenu: #c8c5fcc0;
     --text-hover: #5f27cd;
+    --input: #f7f1e3;
 
     --br-radius: 1.6rem;
 
     --isSuccess: #2ecc71;
-    --isWarning: #f7f1e3;
+    --isWarning: #f1c40f;
     --isDanger: #e74c3c;
     --isInfo: #3498db;
 }
@@ -73,7 +74,7 @@ aside,
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-    display: none;
+
 }
 
 .active {
@@ -87,9 +88,33 @@ aside,
     transform: translate(-50%, -50%);
     padding: 3rem;
     min-width: 40rem;
+    max-width: 50rem;
     background-color: var(--bg-color);
     border-radius: var(--br-radius);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    animation: modalFadeIn .2s ease-in-out;
+}
+
+@keyframes modalFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .notiPutCard__container-title {
@@ -98,26 +123,46 @@ aside,
 }
 
 .notiPutCard__container-title-text {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
     text-align: center;
-}
-
-.notiPutCard__container-title-icon {
-    font-size: 5rem;
-    color: var(--isSuccess);
-    margin-bottom: 2rem;
-    text-align: center;
+    color: #333;
 }
 
 .notiPutCard__container-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+
+.notiPutCard__container-content-text {
+    font-size: 1.8rem;
+    color: #333;
     text-align: center;
 }
+
+.notiPutCard__container-title-icon {
+    font-size: 7rem;
+    /* color: var(--isWarning); */
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.notiPutCard__container-title-icon-success {
+    color: var(--isSuccess);
+}
+
+.notiPutCard__container-title-icon-warning {
+    color: var(--isWarning);
+}
+
+.notiPutCard__container-title-icon-error {
+    color: var(--isDanger);
+}
+
 
 /* ------------------------------------------------------- */
 /*                     Reponsive                          */

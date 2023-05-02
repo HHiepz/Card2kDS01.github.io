@@ -158,7 +158,7 @@
 .redeemCard__form-box input {
     width: 100%;
     border: none;
-    background-color: var(--isWarning);
+    background-color: var(--input);
     outline: none;
     font-size: 1.6rem;
     color: var(--text-color);
@@ -168,7 +168,7 @@
 .redeemCard__form select {
     width: 100%;
     border: none;
-    background-color: var(--isWarning);
+    background-color: var(--input);
     outline: none;
     font-size: 1.6rem;
     color: var(--text-color);
