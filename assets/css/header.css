@@ -186,7 +186,6 @@
     left: 0%;
     background-color: var(--bg-submenu);
     border-radius: var(--br-radius);
-    /* overflow: hidden; */
     z-index: 1;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 }

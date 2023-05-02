@@ -11,11 +11,17 @@ html {
 :root {
     --bg-body-color: #ecf0f1;
     --bg-color: #fff;
-    --text-color-white: #eee;
-    --text-color: #333;
+    --bg-black: #30336b;
     --bg-hover: #a29bfe33;
     --bg-submenu: #c8c5fcc0;
+    --bg-blue: #75d1e6;
+    --bg-brown: #dfe6e9;
+
+    --text-color-white: #eee;
+    --text-color: #333;
     --text-hover: #5f27cd;
+    --text-brown1: #636e72;
+
     --input: #f7f1e3;
 
     --br-radius: 1.6rem;
@@ -24,6 +30,7 @@ html {
     --isWarning: #f1c40f;
     --isDanger: #e74c3c;
     --isInfo: #3498db;
+    --isDisabled: #b2bec3;
 }
 
 body {
@@ -50,6 +57,7 @@ aside {
 #wp-content {
     flex: 1 1 auto;
     /* Cho phép div này mở rộng */
+    min-height: 75rem;
 
 }
 
@@ -67,6 +75,36 @@ aside,
 /* ------------------------------------------------------- */
 /*                     Chức năng                          */
 /* ------------------------------------------------------- */
+.active {
+    display: block !important;
+}
+
+.unactive {
+    display: none !important;
+}
+/* Title content */
+.title-content {
+    background-color: var(--bg-hover);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.title-content h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--text-hover);
+}
+
+.title-content__icon {
+    width: 3rem;
+}
+
+/* Content */
+.content {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
 .notiPutCard {
     position: fixed;
     top: 0;
@@ -74,12 +112,9 @@ aside,
     right: 0;
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
-
 }
 
-.active {
-    display: block !important;
-}
+
 
 .notiPutCard__container {
     position: absolute;
@@ -189,6 +224,86 @@ aside,
 
 .notiPutCard__container-selected-cancel {
     background-color: var(--isDanger);
+}
+
+/* redeemCard__form */
+.inputCustom__form {
+    margin-top: 4rem;
+    margin-bottom: 6rem;
+    display: flex;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+
+.inputCustom__form-box {
+    flex: 1;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--br-radius);
+    margin-right: 1rem;
+}
+
+.inputCustom__form-box label {
+    display: block;
+}
+
+.inputCustom__form-box input {
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0);
+    background-color: var(--input);
+    outline: none;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+}
+
+.inputCustom__form select {
+    width: 100%;
+    border: none;
+    background-color: var(--input);
+    outline: none;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.inputCustom__form-box input,
+.inputCustom__form select {
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.inputCustom__form-box-submit {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.inputCustom__form-box-submit input {
+    margin: 0;
+    height: 100%;
+    background-color: var(--text-hover);
+    color: var(--text-color-white);
+    transition: 0.3s background-color;
+}
+
+.inputCustom__form-box-submit input:hover {
+    background-color: var(--isInfo);
+    cursor: pointer;
+}
+
+.inputCustom__form-box input:disabled {
+    background-color: var(--isDisabled);
+    color: #333;
+    cursor: not-allowed;
+}
+
+/* Nếu người dùng focus vào */
+.inputCustom__form-box input:focus {
+    border: 1px solid var(--isInfo);
 }
 
 

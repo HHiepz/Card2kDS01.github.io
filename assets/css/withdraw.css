@@ -76,23 +76,6 @@
     cursor: pointer;
 }
 
-/* Title content */
-.title-content {
-    background-color: var(--bg-hover);
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.title-content h2 {
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: var(--text-hover);
-}
-
-.title-content__icon {
-    width: 3rem;
-}
-
 /* listUserBank  */
 .listUserBank__table {
     width: 100%;
