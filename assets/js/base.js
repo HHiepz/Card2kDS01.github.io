@@ -13,8 +13,8 @@ btnCardDiscount.forEach((btn) => {
 function boxNoti(messager, isStatus = 'warning', title = 'Hệ thống') {
     let icon = {
         'warning': 'fa-solid fa-triangle-exclamation',
-        'success': 'fa-solid fa-check',
-        'error': 'fa-solid fa-times'
+        'success': 'fa-solid fa-circle-check',
+        'error': 'fa-solid fa-circle-xmark'
     }
     let boxNoti = ` 
     <div class="notiPutCard"> 
@@ -35,6 +35,7 @@ function boxNoti(messager, isStatus = 'warning', title = 'Hệ thống') {
     // Nhấn ra ngoài box noti thì tự động tắt thông báo
     let notiPutCard = document.querySelector('.notiPutCard');
     notiPutCard.addEventListener('click', () => {
+        clearTimeout(timeout);
         return document.querySelector(".notiPutCard").remove();
     })
     let notiPutCardContainer = document.querySelector('.notiPutCard__container');
@@ -43,13 +44,50 @@ function boxNoti(messager, isStatus = 'warning', title = 'Hệ thống') {
     })
 
     // Xóa boxNoti sau 5s
-    setTimeout(() => {
+    let timeout = setTimeout(() => {
         document.querySelector(".notiPutCard").remove();
     }, 5000)
 }
 
 function checkBoxNoti(messager, isStatus = 'warning', title = 'Bạn có chắc chắn chứ?') {
-    
+    let icon = {
+        'warning': 'fa-solid fa-triangle-exclamation',
+        'success': 'fa-solid fa-circle-check',
+        'error': 'fa-solid fa-circle-xmark'
+    }
+    let boxNoti = `
+    <div class="notiPutCard">
+        <div class="notiPutCard__container">
+            <div class="notiPutCard__container-title">
+                <i class="notiPutCard__container-title-icon notiPutCard__container-title-icon-${isStatus} ${icon[isStatus]}"></i>
+                <h3 class="notiPutCard__container-title-text">${title}</h3>
+            </div>
+            <div class="notiPutCard__container-content">
+                <p class="notiPutCard__container-content-text">
+                    ${messager}
+                </p>
+            </div>
+            <div class="notiPutCard__container-selected">
+                <button id="js-checkBoxNoti-true" class="notiPutCard__container-selected-item notiPutCard__container-selected-active">Xác nhận</button>
+                <button id="js-checkBoxNoti-false" class="notiPutCard__container-selected-item notiPutCard__container-selected-cancel">Hủy</button>
+            </div>
+        </div>
+    </div>
+    `
+    document.querySelector("body").insertAdjacentHTML("beforeend", boxNoti);
+    let checkBoxNotiTrue = document.getElementById('js-checkBoxNoti-true');
+    let checkBoxNotiFalse = document.getElementById('js-checkBoxNoti-false');
+    return new Promise((resolve, reject) => {
+        checkBoxNotiTrue.addEventListener('click', () => {
+            document.querySelector('.notiPutCard').remove();
+            resolve(true);
+        })
+
+        checkBoxNotiFalse.addEventListener('click', () => {
+            document.querySelector('.notiPutCard').remove();
+            resolve(false);
+        })
+    })
 }
 
 // Gửi thẻ
@@ -82,14 +120,14 @@ redeemCard.addEventListener("click", () => {
     if (isNaN(maThe) || isNaN(seriThe)) {
         return boxNoti('Mã thẻ & Serial phải là số.', 'error');
     }
-
-    // Kiểm tra người dùng có chắc chắn muốn gửi thẻ
     isCardGood = true;
-    if (confirm("Bạn có chắc chắn muốn gửi thẻ?")) {
-        if (isCardGood) {
-            document.querySelector('input[name="maThe"]').value = "";
-            document.querySelector('input[name="serialThe"]').value = "";
-            boxNoti('Bạn đã gửi thẻ thành công! Hệ thống đang duyệt...', 'success');
-        }
-    }
+
+    checkBoxNoti('Hãy kiểm tra kỹ mệnh giá trước khi gửi để tránh mất tiền bạn nha', 'warning', 'Kiểm tra mệnh giá')
+        .then((data) => {
+            if (data) {
+                document.querySelector('input[name="maThe"]').value = "";
+                document.querySelector('input[name="serialThe"]').value = "";
+                boxNoti('Bạn đã gửi thẻ thành công! Hệ thống đang duyệt...', 'success');
+            }
+        })
 });

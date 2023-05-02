@@ -120,7 +120,8 @@
 }
 
 .infoUser__item-hasMenu:hover .infoUser__item-menu,
-.infoUser__item-hasMenu:hover .infoUser__item-noti {
+.infoUser__item-hasMenu:hover .infoUser__item-noti,
+.infoUser__item-hasMenu:hover .infoUser__item-bell {
     display: block;
 }
 
@@ -181,7 +182,7 @@
 .infoUser__item-noti {
     display: none;
     position: absolute;
-    top: 200%;
+    top: 300%;
     left: 0%;
     background-color: var(--bg-submenu);
     border-radius: var(--br-radius);
@@ -204,7 +205,7 @@
     /* Tạo 1 bức tường ảo */
     content: "";
     position: absolute;
-    top: -11%;
+    top: -12%;
     left: 0%;
     padding: 2rem 0.5rem;
     width: 15%;
@@ -239,5 +240,71 @@
 }
 
 .infoUser__item-noti-item-isNotRead {
+    background-color: var(--bg-color);
+}
+
+
+
+.infoUser__item-bell {
+    display: none;
+    position: absolute;
+    top: 300%;
+    left: -100%;
+    background-color: var(--bg-submenu);
+    border-radius: var(--br-radius);
+    /* overflow: hidden; */
+    z-index: 1;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.infoUser__item-bell::before {
+    content: "";
+    position: absolute;
+    top: -11%;
+    left: 15%;
+    border: 20px solid transparent;
+    border-bottom-color: var(--bg-submenu);
+    z-index: -1;
+}
+
+.infoUser__item-bell::after {
+    /* Tạo 1 bức tường ảo */
+    content: "";
+    position: absolute;
+    top: -11%;
+    left: 14%;
+    padding: 2rem 0.5rem;
+    width: 15%;
+    z-index: 1;
+}
+
+.infoUser__item-bell-item {
+    display: block;
+    margin: 0 !important;
+    padding: 2rem !important;
+    min-width: 30rem;
+    font-size: 1.2rem !important;
+    justify-content: space-between;
+    border-radius: var(--br-radius);
+    align-items: center;
+}
+
+.infoUser__item-bell-item:hover {
+    color: var(--isDanger);
+    cursor: pointer;
+}
+
+.infoUser__item-bell-item-content {
+    display: flex;
+    align-items: center;
+}
+
+.infoUser__item-bell-item-content-date {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    text-align: right;
+}
+
+.infoUser__item-bell-item-isNotRead {
     background-color: var(--bg-color);
 }

@@ -163,6 +163,34 @@ aside,
     color: var(--isDanger);
 }
 
+.notiPutCard__container-selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.notiPutCard__container-selected-item {
+    padding: 1.5rem 2rem;
+    margin: 1rem;
+    border: none;
+    color: var(--text-color-white);
+    font-weight: bold;
+}
+
+.notiPutCard__container-selected-item:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.notiPutCard__container-selected-active {
+    background-color: var(--isInfo);
+}
+
+.notiPutCard__container-selected-cancel {
+    background-color: var(--isDanger);
+}
+
 
 /* ------------------------------------------------------- */
 /*                     Reponsive                          */
